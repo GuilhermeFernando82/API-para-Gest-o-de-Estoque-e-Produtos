@@ -1,5 +1,6 @@
 using MeuProjeto.Application.DTOs;
-using MeuProjeto.Domain;
+using MeuProjeto.Application.Interfaces;
+using MeuProjeto.Domain.Entities;
 using MeuProjeto.Domain.Repositories;
 
 namespace MeuProjeto.Application.UseCases;
@@ -13,7 +14,7 @@ public class UpdateProductUseCase : IUpdateProductUseCase
         _produtoRepository = produtoRepository;
     }
 
-    public async Task<CreateProductResponse> ExecuteAsync(Guid id, CreateProductRequest request)
+    public async Task<CreateProductResponse> ExecuteAsync(Guid id, Produto request)
     {
         var produto = await _produtoRepository.ObterPorIdAsync(id);
         if (produto == null)
@@ -27,6 +28,8 @@ public class UpdateProductUseCase : IUpdateProductUseCase
         produto.Nome = request.Nome;
         produto.Descricao = request.Descricao;
         produto.Preco = request.Preco;
+        produto.Categoria = Enum.Parse<Domain.Entities.Categoria>(
+        request.Categoria.ToString());
 
         await _produtoRepository.AtualizarAsync(produto);
 
@@ -35,7 +38,8 @@ public class UpdateProductUseCase : IUpdateProductUseCase
             Id = produto.Id,
             Nome = produto.Nome,
             Descricao = produto.Descricao,
-            Preco = produto.Preco
+            Preco = produto.Preco,
+            Categoria = produto.Categoria.ToString()
         };
     }
 }

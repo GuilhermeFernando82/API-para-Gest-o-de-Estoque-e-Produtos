@@ -1,3 +1,4 @@
+using MeuProjeto.Application.Interfaces;
 using MeuProjeto.Application.Services;
 using MeuProjeto.Application.UseCases;
 using MeuProjeto.Domain.Repositories;

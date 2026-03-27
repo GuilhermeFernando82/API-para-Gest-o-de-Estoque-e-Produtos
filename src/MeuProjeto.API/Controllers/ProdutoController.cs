@@ -1,13 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using MeuProjeto.Application.DTOs;
-using MeuProjeto.Application.UseCases;
 using Microsoft.AspNetCore.Authorization;
+using MeuProjeto.Domain.Entities;
+using MeuProjeto.Application.Interfaces;
 
 namespace MeuProjeto.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-[Authorize(Roles = "Administrador")]
+// [Authorize(Roles = "Administrador")]
 public class ProdutoController : ControllerBase
 {
     private readonly ICreateProductUseCase _createProductUseCase;
@@ -35,7 +36,7 @@ public class ProdutoController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Criar([FromBody] CreateProductRequest request)
+    public async Task<IActionResult> Criar([FromBody] Produto request)
     {
         var produto = await _createProductUseCase.ExecuteAsync(request);
         return CreatedAtAction(nameof(ObterPorId), new { id = produto.Id }, produto);
@@ -51,7 +52,7 @@ public class ProdutoController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Editar(Guid id, [FromBody] CreateProductRequest request)
+    public async Task<IActionResult> Editar(Guid id, [FromBody] Produto request)
     {
         var produto = await _updateProductUseCase.ExecuteAsync(id, request);
         return Ok(produto);

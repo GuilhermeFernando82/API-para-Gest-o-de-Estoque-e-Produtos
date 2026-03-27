@@ -1,4 +1,5 @@
 using MeuProjeto.Application.DTOs;
+using MeuProjeto.Application.Interfaces;
 using MeuProjeto.Domain;
 using MeuProjeto.Domain.Entities;
 using MeuProjeto.Domain.Repositories;

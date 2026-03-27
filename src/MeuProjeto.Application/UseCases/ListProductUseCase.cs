@@ -1,4 +1,5 @@
 using MeuProjeto.Application.DTOs;
+using MeuProjeto.Application.Interfaces;
 using MeuProjeto.Domain;
 using MeuProjeto.Domain.Repositories;
 
@@ -21,7 +22,8 @@ public class ListProductUseCase : IListProductUseCase
             Id = p.Id,
             Nome = p.Nome,
             Descricao = p.Descricao,
-            Preco = p.Preco
+            Preco = p.Preco,
+            Categoria = p.Categoria.ToString()
         });
     }
 }

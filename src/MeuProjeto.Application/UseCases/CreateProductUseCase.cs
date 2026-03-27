@@ -1,4 +1,5 @@
 using MeuProjeto.Application.DTOs;
+using MeuProjeto.Application.Interfaces;
 using MeuProjeto.Domain;
 using MeuProjeto.Domain.Entities;
 using MeuProjeto.Domain.Repositories;
@@ -14,7 +15,7 @@ public class CreateProductUseCase : ICreateProductUseCase
         _produtoRepository = produtoRepository;
     }
 
-    public async Task<CreateProductResponse> ExecuteAsync(CreateProductRequest request)
+    public async Task<CreateProductResponse> ExecuteAsync(Produto request)
     {
         if (string.IsNullOrWhiteSpace(request.Nome))
             throw new ArgumentException("Nome é obrigatório");
@@ -26,7 +27,8 @@ public class CreateProductUseCase : ICreateProductUseCase
             Id = Guid.NewGuid(),
             Nome = request.Nome,
             Descricao = request.Descricao,
-            Preco = request.Preco
+            Preco = request.Preco,
+            Categoria = request.Categoria
         };
 
         await _produtoRepository.AdicionarAsync(produto);
@@ -36,7 +38,8 @@ public class CreateProductUseCase : ICreateProductUseCase
             Id = produto.Id,
             Nome = produto.Nome,
             Descricao = produto.Descricao,
-            Preco = produto.Preco
+            Preco = produto.Preco,
+            Categoria = produto.Categoria.ToString()
         };
     }
 }

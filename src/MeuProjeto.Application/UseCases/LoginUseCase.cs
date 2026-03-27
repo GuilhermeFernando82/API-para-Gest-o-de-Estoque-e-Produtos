@@ -1,4 +1,5 @@
 using MeuProjeto.Application.DTOs;
+using MeuProjeto.Application.Interfaces;
 using MeuProjeto.Application.Services;
 using MeuProjeto.Domain;
 using MeuProjeto.Domain.Repositories;

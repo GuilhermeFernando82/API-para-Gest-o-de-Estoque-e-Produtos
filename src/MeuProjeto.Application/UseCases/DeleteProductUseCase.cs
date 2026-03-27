@@ -1,3 +1,4 @@
+using MeuProjeto.Application.Interfaces;
 using MeuProjeto.Domain;
 using MeuProjeto.Domain.Repositories;
 

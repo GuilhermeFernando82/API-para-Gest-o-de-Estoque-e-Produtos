@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MeuProjeto.Application.DTOs;
-using MeuProjeto.Application.UseCases;
 using Microsoft.AspNetCore.Authorization;
+using MeuProjeto.Application.Interfaces;
 
 namespace MeuProjeto.API.Controllers;
 

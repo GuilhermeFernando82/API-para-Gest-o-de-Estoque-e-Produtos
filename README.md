@@ -1,6 +1,6 @@
-# MeuProjeto
+# Harmonic Stock - API de Gestão de Instrumentos Musicais
 
-API RESTful em .NET 8 seguindo Clean Architecture, DDD, TDD, PostgreSQL, autenticação JWT, logging estruturado, Swagger e boas práticas de engenharia de software.
+API RESTful em .NET 8 para gerenciamento de estoque de uma loja de instrumentos musicais. Implementada seguindo Clean Architecture, DDD, TDD, PostgreSQL, autenticação JWT e Swagger.
 
 ## Como executar o projeto
 
@@ -28,7 +28,7 @@ API RESTful em .NET 8 seguindo Clean Architecture, DDD, TDD, PostgreSQL, autenti
    ```sh
    dotnet run --project src/MeuProjeto.API
    ```
-6. Acesse a documentação Swagger em: http://localhost:5151/swagger/index.html
+6. Acesse a documentação Swagger em: http://localhost:5000/swagger
 
 ### Execução com Docker
 
@@ -100,9 +100,10 @@ Payload exemplo:
 
 ```json
 {
-  "nome": "Produto Teste",
-  "descricao": "Descrição do produto",
-  "preco": 99.9
+  "nome": "Guitarra Fender Stratocaster Player",
+  "descricao": "Corpo em Alder, braço Maple, 3 captadores Single-Coil Player Series. Cor: Sunburst.",
+  "preco": 7500.0,
+  "categoria": "AcessoriosPets"
 }
 ```
 

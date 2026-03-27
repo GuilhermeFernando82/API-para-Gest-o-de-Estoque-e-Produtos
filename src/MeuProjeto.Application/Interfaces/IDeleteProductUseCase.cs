@@ -1,4 +1,4 @@
-namespace MeuProjeto.Application.UseCases;
+namespace MeuProjeto.Application.Interfaces;
 
 public interface IDeleteProductUseCase
 {

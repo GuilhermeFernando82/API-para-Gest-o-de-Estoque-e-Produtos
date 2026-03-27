@@ -1,4 +1,5 @@
 -- Criação das tabelas principais para o projeto
+-- Script de Inicialização - Domínio: Instrumentos Musicais
 
 CREATE TABLE IF NOT EXISTS usuarios (
     id UUID PRIMARY KEY,
