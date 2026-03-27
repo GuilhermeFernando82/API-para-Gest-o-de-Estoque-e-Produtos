@@ -28,7 +28,7 @@ API RESTful em .NET 8 seguindo Clean Architecture, DDD, TDD, PostgreSQL, autenti
    ```sh
    dotnet run --project src/MeuProjeto.API
    ```
-6. Acesse a documentação Swagger em: http://localhost:5000/swagger
+6. Acesse a documentação Swagger em: http://localhost:5151/swagger/index.html
 
 ### Execução com Docker
 
@@ -36,7 +36,7 @@ API RESTful em .NET 8 seguindo Clean Architecture, DDD, TDD, PostgreSQL, autenti
    ```sh
    docker-compose up --build
    ```
-2. Acesse a API em: http://localhost:5000
+2. Acesse a API em: http://localhost:5151
 
 ### Executando os testes
 
