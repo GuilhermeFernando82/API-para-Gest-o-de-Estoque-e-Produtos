@@ -27,7 +27,7 @@ API RESTful em .NET 8 para gerenciamento de estoque de uma loja de instrumentos 
    ```sh
    dotnet run --project src/MeuProjeto.API
    ```
-5. Acesse a documentação Swagger em: http://localhost:5000/swagger
+5. Acesse a documentação Swagger em: http://localhost:5151/swagger
 
 ### Execução com Docker
 
