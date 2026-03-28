@@ -103,7 +103,7 @@ Payload exemplo:
   "nome": "Guitarra Fender Stratocaster Player",
   "descricao": "Corpo em Alder, braço Maple, 3 captadores Single-Coil Player Series. Cor: Sunburst.",
   "preco": 7500.0,
-  "categoria": "AcessoriosPets"
+  "categoria": 3 //0 - EquipamentosEsportivos, 1 - InstrumentosMusicais, 2 - ProdutosJardinagem, 3 - AcessoriosPets
 }
 ```
 
