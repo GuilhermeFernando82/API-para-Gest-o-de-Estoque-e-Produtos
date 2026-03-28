@@ -21,15 +21,14 @@ API RESTful em .NET 8 para gerenciamento de estoque de uma loja de instrumentos 
    dotnet build
    ```
 3. Configure o banco de dados PostgreSQL (ajuste a connection string em `src/MeuProjeto.API/appsettings.Development.json` se necessário).
-4. Execute as migrations (se aplicável):
-   ```sh
-   dotnet ef database update --project src/MeuProjeto.Infrastructure --startup-project src/MeuProjeto.API
    ```
-5. Rode a API:
+
+   ```
+4. Rode a API:
    ```sh
    dotnet run --project src/MeuProjeto.API
    ```
-6. Acesse a documentação Swagger em: http://localhost:5000/swagger
+5. Acesse a documentação Swagger em: http://localhost:5000/swagger
 
 ### Execução com Docker
 
@@ -177,5 +176,6 @@ Consulte o Swagger para exemplos detalhados de payloads e respostas.
 - Middleware global para erros
 - Logging estruturado
 - Autenticação JWT e roles
+- Dapper para comunicação com banco
 - Testes unitários com xUnit e Moq
 - Docker para API e PostgreSQL
