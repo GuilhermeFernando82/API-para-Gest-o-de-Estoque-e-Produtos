@@ -8,7 +8,7 @@ namespace MeuProjeto.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-// [Authorize(Roles = "Administrador")]
+[Authorize(Roles = "Administrador")]
 public class ProdutoController : ControllerBase
 {
     private readonly ICreateProductUseCase _createProductUseCase;
