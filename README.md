@@ -1,4 +1,4 @@
-# API de Gestão de Produtos, Pedido e Estoque
+# API de Gestão de Produtos, Pedidos e Estoques
 
 API RESTful em .NET 8 para gerenciamento de estoque de uma loja de instrumentos musicais. Implementada seguindo Clean Architecture, DDD, TDD, PostgreSQL, autenticação JWT e Swagger.
 
