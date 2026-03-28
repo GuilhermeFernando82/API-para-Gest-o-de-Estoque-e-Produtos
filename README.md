@@ -178,5 +178,4 @@ Consulte o Swagger para exemplos detalhados de payloads e respostas.
 - Logging estruturado
 - Autenticação JWT e roles
 - Testes unitários com xUnit e Moq
-- Migrations e seeds com EF Core
 - Docker para API e PostgreSQL
