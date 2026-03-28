@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS produtos (
     id UUID PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     descricao TEXT NOT NULL,
-    preco NUMERIC(18,2) NOT NULL
+    preco NUMERIC(18,2) NOT NULL,
+    categoria varchar(50) NULL
 );
 
 CREATE TABLE IF NOT EXISTS estoques (

@@ -6,6 +6,7 @@ API RESTful em .NET 8 para gerenciamento de estoque de uma loja de instrumentos 
 
 ### Pré-requisitos
 
+- Rodar os scripts sql que estão na pasta scripts/init_db.sql, para criar as tabelas necessárias.
 - .NET 8 SDK
 - Docker e Docker Compose (opcional para banco de dados)
 
